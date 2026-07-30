@@ -1,0 +1,41 @@
+name: Feature request
+description: Propose a scoped improvement tied to a product requirement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: value
+    attributes:
+      label: User value
+      description: Who benefits and what problem does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements and acceptance criteria
+      description: List measurable outcomes and the relevant PRD section.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: State what is in scope and explicitly out of scope.
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks
+      description: Consider data, compatibility, performance, security, and accessibility.
+    validations:
+      required: true
+  - type: textarea
+    id: documentation
+    attributes:
+      label: Documentation impact
+      description: Identify specifications, design documents, ADRs, or guides that may change.
+    validations:
+      required: true
