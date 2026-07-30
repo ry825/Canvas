@@ -425,7 +425,37 @@ PR作成後、次の形式で対象PRの記録を追記する。未着手のPR�
 - 技術的に不要になったタスク、理由、代替実装
 - 後続PRへの引継ぎ事項
 
-**現在の完了記録**: なし
+### PR-01: プロジェクト基盤と品質ゲート
+
+- **完了日**: 2026-07-30
+- **Pull Request**: [#3 Establish project foundation and quality gates](https://github.com/ry825/Canvas/pull/3)
+- **完了したタスク範囲**: PR-01の全タスク。Node.js 24・npm 11向けSPA基盤、4層入口、
+  strict TypeScript Project References、Lint・Format・Test、依存境界検査、CI、テンプレート、
+  README、Chromium smoke testを実装した。
+- **実施した検証**:
+  - `npm ci`: 成功
+  - `npm run format:check`: 成功
+  - `npm run lint`: 成功。層間許可マトリクスと循環依存検査を含む
+  - `npm run typecheck`: 成功
+  - `npm run test:coverage`: 3件成功。対象ランタイムコードの行・分岐・関数・文100%
+  - `npm run build`: 成功
+  - `npm run test:e2e:smoke`: Chromium 1件成功
+  - `npm audit --omit=dev`: 本番依存の脆弱性0件
+  - GitHub Actions `Quality gates`: 成功（58秒）
+  - 手動確認: なし。最小画面の表示、見出し、4層状態はIntegration・Chromium E2Eで確認した
+- **計画と実装の差分**: WindowsでPlaywright管理Web Serverの子プロセスが終了しない事象に
+  対応し、production buildを配信する決定的なE2Eサーバーと実行調停スクリプトを追加した。
+  その他の要求・設計差分はなし。
+- **実装中に追加したタスクと理由**:
+  - `scripts/runE2e.mjs`と`scripts/serveE2e.mjs`: WindowsとCIの両方でE2Eサーバーを確実に
+    起動・回収し、smoke testが終了コードを返すため
+  - [Issue #2](https://github.com/ry825/Canvas/issues/2): 設計指定のESLint 9・Vitest 3系列に
+    残る開発時依存の監査警告について、major upgradeと設計更新を追跡するため
+- **技術的に不要になったタスク**: なし
+- **後続PRへの引継ぎ事項**:
+  - PR #3は2026-07-30にdevelopへMerge済み
+  - PR-02は別の作業指示を受けてから開始する
+  - 開発時依存の監査警告8件はIssue #2で追跡する。本番依存への影響はない
 
 ---
 
