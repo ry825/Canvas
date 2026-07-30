@@ -1,0 +1,125 @@
+:root {
+  color: #172034;
+  background: #f3f6fb;
+  font-family:
+    Inter,
+    "Noto Sans JP",
+    "Yu Gothic UI",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.welcome-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 32px;
+  background:
+    radial-gradient(circle at 15% 20%, rgb(56 111 255 / 14%), transparent 34%),
+    radial-gradient(circle at 85% 80%, rgb(20 169 137 / 12%), transparent 38%), #f3f6fb;
+}
+
+.welcome-card {
+  width: min(760px, 100%);
+  padding: clamp(32px, 7vw, 72px);
+  border: 1px solid #dce3f0;
+  border-radius: 28px;
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 24px 70px rgb(26 47 82 / 12%);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #2458c6;
+  font-size: 0.8rem;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 620px;
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 4.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.welcome-copy {
+  max-width: 620px;
+  margin: 24px 0 36px;
+  color: #4c5a73;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.foundation-status {
+  padding: 24px;
+  border-radius: 18px;
+  background: #edf3ff;
+}
+
+.foundation-status h2 {
+  margin: 0 0 16px;
+  color: #23314d;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.foundation-status ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.foundation-status li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #263652;
+  font-weight: 650;
+}
+
+.foundation-status li span {
+  color: #087d66;
+}
+
+@media (max-width: 600px) {
+  .welcome-shell {
+    padding: 16px;
+  }
+
+  .welcome-card {
+    padding: 28px;
+    border-radius: 20px;
+  }
+
+  .foundation-status ul {
+    grid-template-columns: 1fr;
+  }
+}

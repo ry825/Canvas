@@ -28,39 +28,39 @@
 
 **目的**: 再現可能な開発環境、4層の配置、依存境界、CIを確立する。
 
-- [ ] Git・npm・Viteプロジェクト基盤を構築する
-  - [ ] Git状態を確認し、必要ならリポジトリ、main、developを初期化する
-  - [ ] Node.js 24 LTS、npm 11.x向けの`package.json`と`package-lock.json`を作成する
-  - [ ] React、TypeScript、Viteの最小SPAを起動できるようにする
-  - [ ] `src/app`、`domain`、`application`、`infrastructure`、`ui`の実ファイル入口を作る
+- [x] Git・npm・Viteプロジェクト基盤を構築する
+  - [x] Git状態を確認し、必要ならリポジトリ、main、developを初期化する
+  - [x] Node.js 24 LTS、npm 11.x向けの`package.json`と`package-lock.json`を作成する
+  - [x] React、TypeScript、Viteの最小SPAを起動できるようにする
+  - [x] `src/app`、`domain`、`application`、`infrastructure`、`ui`の実ファイル入口を作る
 
-- [ ] 開発ツールを構成する
-  - [ ] strictなTypeScript Project Referencesを設定する
-  - [ ] ESLint Flat ConfigとPrettierを設定する
-  - [ ] EditorConfig、gitignore、prettierignoreを設定する
-  - [ ] Vitest、Testing Library、Playwright、coverageを設定する
-  - [ ] `dev`、`build`、`format:check`、`lint`、`typecheck`、`test:*` scriptsを定義する
+- [x] 開発ツールを構成する
+  - [x] strictなTypeScript Project Referencesを設定する
+  - [x] ESLint Flat ConfigとPrettierを設定する
+  - [x] EditorConfig、gitignore、prettierignoreを設定する
+  - [x] Vitest、Testing Library、Playwright、coverageを設定する
+  - [x] `dev`、`build`、`format:check`、`lint`、`typecheck`、`test:*` scriptsを定義する
 
-- [ ] アーキテクチャ境界を自動検査する
-  - [ ] パスエイリアスをTypeScript、Vite、Vitest、Playwrightで共有する
-  - [ ] 層間import禁止ルールをESLintへ追加する
-  - [ ] 循環依存と許可マトリクスを検査する`checkArchitecture.mjs`を実装する
-  - [ ] 禁止依存を含むfixtureで検査が失敗することをテストする
+- [x] アーキテクチャ境界を自動検査する
+  - [x] パスエイリアスをTypeScript、Vite、Vitest、Playwrightで共有する
+  - [x] 層間import禁止ルールをESLintへ追加する
+  - [x] 循環依存と許可マトリクスを検査する`checkArchitecture.mjs`を実装する
+  - [x] 禁止依存を含むfixtureで検査が失敗することをテストする
 
-- [ ] CIと開発者向け入口を用意する
-  - [ ] `.github/workflows/ci.yml`を作成する
-  - [ ] PRテンプレートとIssueテンプレートを作成する
-  - [ ] READMEへセットアップ、主要コマンド、設計文書へのリンクを記載する
-  - [ ] 最小アプリのChromium smoke testを追加する
+- [x] CIと開発者向け入口を用意する
+  - [x] `.github/workflows/ci.yml`を作成する
+  - [x] PRテンプレートとIssueテンプレートを作成する
+  - [x] READMEへセットアップ、主要コマンド、設計文書へのリンクを記載する
+  - [x] 最小アプリのChromium smoke testを追加する
 
-- [ ] PR-01の品質確認を完了する
-  - [ ] `npm ci`が成功する
-  - [ ] `npm run format:check`が成功する
-  - [ ] `npm run lint`とアーキテクチャ検査が成功する
-  - [ ] `npm run typecheck`が成功する
-  - [ ] `npm run test:coverage`が成功する
-  - [ ] `npm run build`が成功する
-  - [ ] `npm run test:e2e:smoke`が成功する
+- [x] PR-01の品質確認を完了する
+  - [x] `npm ci`が成功する
+  - [x] `npm run format:check`が成功する
+  - [x] `npm run lint`とアーキテクチャ検査が成功する
+  - [x] `npm run typecheck`が成功する
+  - [x] `npm run test:coverage`が成功する
+  - [x] `npm run build`が成功する
+  - [x] `npm run test:e2e:smoke`が成功する
 
 ## PR-02: Domainモデル・検証・幾何・出力Projection
 
